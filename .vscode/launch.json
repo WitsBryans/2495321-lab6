@@ -15,7 +15,7 @@
             "type": "node",
             "request": "launch",
             "name": "Debug Node.js",
-            "program": "${workspaceFolder}/index.js", // replace with the path to your main Node.js file
+            "program": "${workspaceFolder}/index.js",
             "console": "integratedTerminal"
         }
     ],
