@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin: 'http://localhost:8080'
+    origin: 'http://localhost:8080' // replace with your origin
   }));
 
 const cars = require('./cars.json');
