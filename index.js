@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin: 'http://localhost:8080' // replace with your origin
+    origin: 'http://0.0.0.0:8080' // replace with your origin
   }));
 
 var options = {
@@ -55,7 +55,7 @@ app.post('/cars', (req, res) => {
     res.json(newCar);
 });
 
-//start app at localhost:3001
+//start app at 0.0.0.0:3001
 app.listen(3001, () => {
-    console.log('Server started at http://localhost:3001');
+    console.log('Server started at http://0.0.0.0:3001');
 });
