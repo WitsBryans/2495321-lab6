@@ -1,17 +1,9 @@
 //create cars api using express
 const express = require('express');
-const cors = require('cors');
-
-const server = express();
-server.use('/', express.static('/home/site/wwwroot', {index: 'index.html'}));
-server.listen(process.env.PORT);
 
 const app = express();
-app.use(express.json());
-
-app.use(cors({
-    origin: 'http://localhost:8080' // replace with your origin
-  }));
+app.use('/', express.static('/home/site/wwwroot', {index: 'index.html'}));
+app.listen(process.env.PORT);
 
 const cars = require('./cars.json');
 
@@ -51,9 +43,4 @@ app.post('/cars', (req, res) => {
     console.log(newCar);
     cars.push(newCar);
     res.json(newCar);
-});
-
-//start app at localhost:3001
-app.listen(3001, () => {
-    console.log('Server started at http://localhost:3001');
 });
