@@ -9,7 +9,7 @@ app.use(cors({
     origin: 'http://localhost:8080' // replace with your origin
   }));
 
-app.use(express.static(__dirname));
+app.use('/', express.static(__dirname, {index: 'index.html'}));
 
 const cars = require('./cars.json');
 
