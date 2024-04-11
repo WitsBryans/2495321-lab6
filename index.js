@@ -9,6 +9,8 @@ app.use(cors({
     origin: 'http://localhost:8080' // replace with your origin
   }));
 
+app.use(express.static(__dirname));
+
 const cars = require('./cars.json');
 
 //get all cars
