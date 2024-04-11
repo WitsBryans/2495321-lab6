@@ -5,10 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "name": "Launch Edge",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "/home/bryans/2495321-lab6/index.html"
+            "type": "msedge",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
         },
         {
             "type": "node",
@@ -16,6 +17,12 @@
             "name": "Debug Node.js",
             "program": "${workspaceFolder}/index.js", // replace with the path to your main Node.js file
             "console": "integratedTerminal"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch Edge and Debug Node.js",
+            "configurations": ["Launch Edge", "Debug Node.js"]
         }
     ]
 }
