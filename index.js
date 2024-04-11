@@ -12,8 +12,8 @@ app.use(cors({
 var options = {
 index: 'index.html'
 };
-server.use('/', express.static('/home/site/wwwroot', options));
-server.listen(process.env.PORT);
+app.use('/', express.static('/home/site/wwwroot', options));
+app.listen(process.env.PORT);
 
 const cars = require('./cars.json');
 
