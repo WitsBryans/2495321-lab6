@@ -9,7 +9,11 @@ app.use(cors({
     origin: 'http://localhost:8080' // replace with your origin
   }));
 
-app.use('/', express.static(__dirname, {index: 'index.html'}));
+var options = {
+index: 'index.html'
+};
+server.use('/', express.static('/home/site/wwwroot', options));
+server.listen(process.env.PORT);
 
 const cars = require('./cars.json');
 
