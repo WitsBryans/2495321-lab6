@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "lab6",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js"
+  },
   "author": "Bryan Smith",
   "license": "ISC",
   "dependencies": {
