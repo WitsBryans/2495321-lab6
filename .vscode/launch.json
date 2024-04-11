@@ -5,25 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "command": "npm start",
+            "name": "Run npm start",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
             "name": "Launch Edge",
             "request": "launch",
             "type": "msedge",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
         },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Debug Node.js",
-            "program": "${workspaceFolder}/index.js",
-            "console": "integratedTerminal"
-        },
 
     ],
     "compounds": [
         {
             "name": "Launch Edge and Debug Node.js",
-            "configurations": ["Launch Edge", "Debug Node.js"]
+            "configurations": ["Launch Edge", "Run npm start"]
         }
     ]
 }
